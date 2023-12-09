@@ -43,7 +43,7 @@ class Database
     }
     public function update2($sql)
     {
-        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error());
+        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error($this->link));
         return mysqli_affected_rows($this->link);
     }
 
@@ -74,7 +74,7 @@ class Database
 
         $sql .= $set . $where;
 
-        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error());
+        mysqli_query($this->link, $sql) or die("Lỗi truy vấn Update -- " . mysqli_error($this->link));
 
         return mysqli_affected_rows($this->link);
     }
@@ -182,7 +182,7 @@ class Database
     public  function fetchJones($table, $sql, $total, $page, $row, $pagi = true)
     {
         $data = [];
-
+        $result = null;
         if ($pagi == true) {
             $sotrang = ceil($total / $row);
             $start = ($page - 1) * $row;
@@ -207,7 +207,7 @@ class Database
 
         $data = [];
         // _debug($sql);die;
-        $result = '';
+        $result = null;
         if ($pagi == true) {
             $total = $this->countTable($table);
             $sotrang = ceil($total / $row);

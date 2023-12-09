@@ -74,6 +74,7 @@ $users = $db->fetchID("users", intval($_SESSION['name_id']));
                 <li>Tổng tiền <span class="total-money"></span></li>
               </ul>
               <button type="button" id="thanhtoan" class="site-btn">Xác nhận</button>
+              
             </div>
           </div>
         </div>

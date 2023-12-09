@@ -47,23 +47,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($error)) {
-    $file_name = $_FILES['thundar']['name'];
-    $file_tmp = $_FILES['thundar']['tmp_name'];
-    $file_type = $_FILES['thundar']['type'];
-    $file_error = $_FILES['thundar']['error'];
+    $file_name = $_FILES['files']['name'];
+    $file_tmp = $_FILES['files']['tmp_name'];
+    $file_type = $_FILES['files']['type'];
+    $file_error = $_FILES['files']['error'];
 
-    if ($file_error == 0) {
-      $part = ROOT . "/product/";
-      $data['thundar'] = $file_name;
-    }
-    $isset = $db->fetchOne("product", "name = '" . $data['name'] . "' ");
-    $id_update = $db->update("product", $data, array("id" => $id));
-    if ($id_update > 0 || $id_update2 > 0) {
-      move_uploaded_file($file_tmp, $part . $file_name);
-      $_SESSION['success'] = "Cập nhật thành công!";
-      redirectAdmin("product");
+    if ($_FILES['files']['name'][0] == '') {
+      $isset = $db->fetchOne("product", "name = '" . $data['name'] . "' ");
+      $id_update = $db->update("product", $data, array("id" => $id));
+      if ($id_update > 0 || $id_update2 > 0) {
+        $_SESSION['success'] = "Cập nhật thành công!";
+        redirectAdmin("product");
+      } else {
+        $_SESSION['error'] = "Dữ liệu không đổi!";
+        redirectAdmin("product");
+      }
     } else {
-      $_SESSION['error'] = "Dữ liệu không đổi!";
+      $deleteImage = $db->xoa("product_images", "product_id = '" . $id . "' ");
+      $upload_dir = ROOT . "/product/";
+      $allowed_types = array('jpg', 'png', 'jpeg', 'gif');
+      $dataImage = [];
+      if (!empty(array_filter($_FILES['files']['name']))) {
+        foreach ($_FILES['files']['tmp_name'] as $key => $value) {
+          $file_tmpname = $_FILES['files']['tmp_name'][$key];
+          $file_name = $_FILES['files']['name'][$key];
+          $file_size = $_FILES['files']['size'][$key];
+          $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
+          $filepath = $upload_dir . $file_name;
+          $dataImage = [
+            'image' => $file_name,
+            'product_id' => $id
+          ];
+          $db->insert("product_images", $dataImage);
+          if (in_array(strtolower($file_ext), $allowed_types)) {
+            if (move_uploaded_file($file_tmpname, $filepath)) {
+              $_SESSION['success'] = "Cập nhật thành công!";
+            }
+          }
+        }
+      }
+      $isset = $db->fetchOne("product", "name = '" . $data['name'] . "' ");
+      $id_update = $db->update("product", $data, array("id" => $id));
+      $_SESSION['success'] = "Cập nhật thành công!";
       redirectAdmin("product");
     }
   }
@@ -127,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
               <div class="mb-3">
                 <label for="thundar" class="form-label">Hình ảnh</label>
-                <input type="file" class="form-control" id="thundar" name="thundar" value="<?= $EditProduct['thundar'] ?>">
+                <input type="file" class="form-control" id="thundar" name="files[]" multiple>
                 <img src="<?= uploads(); ?>product/<?= $EditProduct['thundar'] ?>" width="3.125rem" height="3.125rem">
                 <?php if (isset($error['thundar'])) : ?>
                   <div id="thundar" class="form-text"><?= $error['thundar']; ?> </div>

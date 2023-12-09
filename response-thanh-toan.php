@@ -29,8 +29,8 @@ if ($_REQUEST['resultCode'] == 0) {
       $id_insert = $db->insert("orders", $data2);
       $price += $value['qty'] * $value['price'];
     }
-    // $_SESSION['success'] = "Xác nhận mua hàng thành công! Đơn hàng của bạn sẽ được giao đến bạn trong thời gian sớm nhất !!!";
-    // header("location: thong-bao.php");
+    $_SESSION['success'] = "Xác nhận mua hàng thành công! Đơn hàng của bạn sẽ được giao đến bạn trong thời gian sớm nhất !!!";
+    header("location: thong-bao.php");
   }
   $isset = $db->fetchOne("transaction", "id = '" . $idtran . "' ");
   $db->update("transaction", ['amount' => $price], array("id" => $idtran));

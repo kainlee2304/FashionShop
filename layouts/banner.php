@@ -49,7 +49,7 @@
 <section class="banner spad">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7 offset-lg-4">
+			<div class="col-lg-8 offset-lg-4">
 				<div class="banner__item">
 					<div class="banner__item__pic">
 						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-1.jpg" alt="">
@@ -71,13 +71,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-8 offset-lg-4 m-8">
 				<div class="banner__item banner__item--last">
 					<div class="banner__item__pic">
 						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-3.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Shoes Spring 2030</h2>
+						<h2>Shoes Spring</h2>
 						<a href="#">Mua ngay</a>
 					</div>
 				</div>

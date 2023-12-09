@@ -99,7 +99,7 @@ if (getInput('keywork') != '') {
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-3">
+				<div class="col-lg- col-md-3">
 					<div class="header__logo">
 						<a href="index.php"><img src="<?php echo base_url() ?>public/frontend/img/logo.png" alt=""></a>
 					</div>
@@ -109,7 +109,7 @@ if (getInput('keywork') != '') {
 						<ul>
 							<li class="active"><a href="index.php">Trang chủ</a></li>
 							<li><a href="timkiem.php?keyword=">Cửa hàng</a></li>
-							<!-- <li><a href="./blog.html">Bài vết</a></li> -->
+							<li><a href="./blog.html">Bài vết</a></li>
 							<li><a href="feedback.php">Phản hồi</a></li>
 						</ul>
 					</nav>

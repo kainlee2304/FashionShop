@@ -41,8 +41,8 @@ if (isset($_SESSION['name_id'])) {
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="<?= uploads() ?>product/<?= $item['images'] ?>">
                             <ul class="product__hover">
-                                <!-- <li><a href="#"><img src="<?= base_url() ?>public/frontend/img/icon/heart.png" alt=""></a></li> -->
-                                <!-- <li><a href="#"><img src="<?= base_url() ?>public/frontend/img/icon/compare.png" alt=""> <span>Compare</span></a></li> -->
+                                <li><a href="#"><img src="<?= base_url() ?>public/frontend/img/icon/heart.png" alt=""></a></li>
+                                <li><a href="#"><img src="<?= base_url() ?>public/frontend/img/icon/compare.png" alt=""> <span>Compare</span></a></li>
                                 <li><a href="san_pham.php?id=<?= $item['id'] ?>"><img src="<?= base_url() ?>public/frontend/img/icon/search.png" alt=""></a></li>
                                 <?php if (!isset($_SESSION['name_id'])) : ?>
                                     <li><a href="dang-nhap.php"><img src="<?= base_url() ?>public/frontend/img/icon/heart.png" alt=""></a></li>
