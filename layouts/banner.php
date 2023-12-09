@@ -1,15 +1,13 @@
 <!-- Hero Section Begin -->
 <section class="hero">
 	<div class="hero__slider owl-carousel">
-		<div class="hero__items set-bg" data-setbg="<?php echo base_url() ?>public/frontend/img/hero/hero-1.jpg">
+		<div class="hero__items set-bg" data-setbg="<?php echo base_url() ?>public/frontend/img/hero/hero-3.png">
 			<div class="container">
-				<div class="row">
+				<div class="row">	
 					<div class="col-xl-5 col-lg-7 col-md-8">
 						<div class="hero__text">
-							<h6>Summer Collection</h6>
-							<h2>Fall - Winter Collections 2030</h2>
-							<p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-								commitment to exceptional quality.</p>
+							
+							
 							<a href="#" class="primary-btn">Mua ngay <span class="arrow_right"></span></a>
 							<div class="hero__social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
@@ -55,7 +53,7 @@
 						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-1.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Clothing Collections 2030</h2>
+						<h2>Tre nứa</h2>
 						<a href="#">Mua ngay</a>
 					</div>
 				</div>
@@ -66,7 +64,7 @@
 						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-2.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Accessories</h2>
+						<h2>Tui jean</h2>
 						<a href="#">Mua ngay</a>
 					</div>
 				</div>
@@ -77,8 +75,8 @@
 						<img src="<?php echo base_url() ?>public/frontend/img/banner/banner-3.jpg" alt="">
 					</div>
 					<div class="banner__item__text">
-						<h2>Shoes Spring</h2>
-						<a href="#">Mua ngay</a>
+						<h2>Flower Spring</h2>
+						<a href="#">hoa ngũ sắc</a>
 					</div>
 				</div>
 			</div>

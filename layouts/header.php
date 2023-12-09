@@ -101,7 +101,7 @@ if (getInput('keywork') != '') {
 			<div class="row">
 				<div class="col-lg- col-md-3">
 					<div class="header__logo">
-						<a href="index.php"><img src="<?php echo base_url() ?>public/frontend/img/logo.png" alt=""></a>
+						<a href="index.php"><img src="<?php echo base_url() ?>public/frontend/img/hero/HM.png" alt=""></a>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6">
