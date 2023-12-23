@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oganic Shop Admin</title>
-    <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>/public/admin/images/logos/favicon.png" />
+    <title>HandMade</title>
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>/public/admin/images/logos/HM.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>/public/admin/css/styles.min.css" />
     <link rel="stylesheet" href="<?php echo base_url() ?>/public/admin/css/image-uploader.css" />
@@ -20,7 +20,7 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="<?= base_url() ?>./admin" class="text-nowrap logo-img">
-                        <img src="<?php echo base_url() ?>/public/admin/images/logos/dark-logo.svg" width="180" alt="" />
+                        <img src="<?php echo base_url() ?>/public/admin/images/logos/HM.png" width="130" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
@@ -43,7 +43,7 @@
                         </li>
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">UI COMPONENTS</span>
+                            <span class="hide-menu">COMPONENTS</span>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="<?= modules('category') ?>" aria-expanded="false">
@@ -125,7 +125,7 @@
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                                    <img src="../assets/img/admin.png" alt="" width="35" height="35" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                                     <div class="message-body">

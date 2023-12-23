@@ -142,7 +142,7 @@
     {
         function redirectAdmin($url = "")
         {
-            header("location: ".base_url()."admin/modules/{$url}");exit();
+            header("location: ".base_url()."admin/modules/{$url}");exit();// được sử dụng để đảm bảo rằng không có mã PHP nào thực hiện sau khi chuyển hướng
         }
     }
 
