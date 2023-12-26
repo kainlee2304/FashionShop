@@ -83,7 +83,7 @@ $salesyear = $db->fetchsql($sql);
             </div>
             <hr style="width:90%;margin: 1rem auto">
             <div class="p-4 bg-primary">
-                <h1 class="text-center text-white"><?= number_format($total) ?> đ</h1>
+                <h1 class="text-center text-white"><?= number_format($total) ?> VND</h1>
             </div>
         </div>
         <div class="col-md-3 bg-muted p-0 border">
@@ -104,13 +104,13 @@ $salesyear = $db->fetchsql($sql);
                 <h1 class="text-center text-white"><?= $countcategory ?></h1>
             </div>
         </div>
-        <div class="col-md-3 bg-light p-0 border">
+        <div class="col-md-3 bg-secondary p-0 border">
             <div class="p-3 text-dark text-center">
                 Phản hồi
             </div>
-            <hr style="width:90%; margin:1rem auto; color:#000">
-            <div class="p-4 bg-light">
-                <h1 class="text-center text-dark"><?= $countfeedback ?></h1>
+            <hr style="width:90%; margin:1rem auto; color:#fff">
+            <div class="p-4 bg-secondary">
+                <h1 class="text-center text-light"><?= $countfeedback ?></h1>
             </div>
         </div>
     </div>
